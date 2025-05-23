@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Button } from '@/components/ui/button'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
     </Link>
     <Link to={"/create-wafles"}>
     <button>Create wafles</button>
+    <Button>Button</Button>
     </Link>
     </>
   )
