@@ -11,7 +11,6 @@ mongoose
 .catch((err) => console.log(err));
 
 var indexRouter = require('./routes/index');
-const peopleRouter = require("./routes/people");
 const waflesRouter = require("./routes/wafles");
 
 var app = express();

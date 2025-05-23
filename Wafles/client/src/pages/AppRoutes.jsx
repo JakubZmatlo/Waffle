@@ -1,28 +1,21 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom"; 
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./Home";
-import CreateHuman from "./CreateHuman";
-import CreatedHuman from "./CreatedHuman";
-import PeopleList from "./PeopleList";
-import Human from "./Human";
 import Createwafle from "./CreateWafles";
-
+import WafleListCell from "./WafleList/WafleListCell";
+import CreatedWafles from "./CreatedWafles";
+import OrdersList from "./Orders";
 
 export default function AppRoutes() {
   return (
-    <>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/create-human" element={<CreateHuman />} />
-                <Route path="/created-human/:id" element={<CreatedHuman />} />
-                <Route path="/people" element={<PeopleList />} />
-                <Route path="/human/:id" element={<Human />} />
-                <Route path="/create-wafles" element={<Createwafle />} />
-                
-            </Routes>
-        </BrowserRouter>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/create-wafles" element={<Createwafle />} />
+        <Route path="/wafles" element={<WafleListCell />} />
+        <Route path="/created-wafle/:id" element={<CreatedWafles />} />
+        <Route path="/orders" element={<OrdersList />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
