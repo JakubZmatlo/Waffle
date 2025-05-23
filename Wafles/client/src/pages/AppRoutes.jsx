@@ -6,6 +6,7 @@ import WafleListCell from "./WafleList/WafleListCell";
 import CreatedWafles from "./CreatedWafles";
 import OrdersList from "./Orders";
 
+
 export default function AppRoutes() {
   return (
     <BrowserRouter>

@@ -4,8 +4,9 @@ import './index.css'
 import App from './App.jsx'
 import AppRoutes from './pages/AppRoutes.jsx'
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AppRoutes />
+    <App />
   </StrictMode>,
 )
