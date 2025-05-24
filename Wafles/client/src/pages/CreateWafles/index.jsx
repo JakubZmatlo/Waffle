@@ -28,7 +28,7 @@ export default function Createwafle() {
   return (
     <>
       <div
-        className="min-h-screen flex flex-col items-center justify-center text-center px-4"
+        className="in-h-screen flex flex-col items-center justify-center text-center px-4"
         style={{
           backgroundImage:
             "url('https://www.transparenttextures.com/patterns/cream-pixels.png')",
@@ -53,7 +53,7 @@ export default function Createwafle() {
           />
 
           <div>
-            <h3 className="text-xl text-4xl font-bold text-yellow-600 mb-8">
+            <h3 className="text-xl  font-bold text-yellow-600 mb-8">
               1. Vyber marmeládu
             </h3>
             <div className="grid grid-cols-4 gap-4 text-white">
