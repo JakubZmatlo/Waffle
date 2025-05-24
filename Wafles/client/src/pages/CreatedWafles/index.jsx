@@ -14,7 +14,7 @@ export default function CreatedWafles() {
   if (!wafle) return <p className="text-center text-red-600 mt-8">Objednávka nenalezena.</p>;
 
   return (
-    <div className="max-w-md mx-auto mt-12 p-6 bg-yellow-50 rounded-2xl shadow-md border border-yellow-300">
+    <div className="max-w-md mx-auto mt-12 p-6 bg-yellow-50 rounded-2xl shadow-md border border-yellow-500">
       <h1 className="text-3xl font-bold text-yellow-700 mb-6 text-center">🧇Vaše wafle🧇</h1>
       <p className="text-center mb-6 text-yellow-800">Vaše objednávka byla úspěšně přijata:</p>
       <ul className="space-y-3 text-lg text-yellow-900">

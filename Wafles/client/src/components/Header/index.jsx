@@ -9,7 +9,7 @@ export default function Header() {
     <header className="bg-yellow-100 sticky top-0 z-50 shadow-md rounded-4xl not-even:mb-8">
       <div className="flex items-center justify-between max-w-6xl mx-auto px-4 sm:px-8 py-4">
         <div className="text-yellow-700 font-bold text-3xl sm:text-4xl cursor-pointer select-none">
-          🧇 Wafles
+          🧇SweetWafles
         </div>
 
         <button
@@ -27,10 +27,10 @@ export default function Header() {
             Domů
           </Link>
           <Link
-            to="/create-wafles"
+            to="/AboutUs"
             className="text-yellow-800 font-medium hover:underline hover:text-yellow-600"
           >
-            Objednat wafli
+            O nás
           </Link>
           <Link
             to="/favorite-wafles"
@@ -46,12 +46,14 @@ export default function Header() {
           </Link>
         </nav>
 
+        <Link to="/contact">
         <button
           style={{ backgroundColor: "#b45309" }}
           className="hidden md:block text-white px-4 py-3 rounded-xl hover:bg-yellow-700 transition"
         >
           Contact
         </button>
+        </Link>
       </div>
 
       {menuOpen && (
@@ -71,7 +73,7 @@ export default function Header() {
             Objednat wafli
           </Link>
           <Link
-            to="/favorite-wafles"
+            to="/favorite"
             className="block text-yellow-700 font-medium hover:text-yellow-600"
             onClick={() => setMenuOpen(false)}
           >
@@ -84,12 +86,17 @@ export default function Header() {
           >
             Objednávky
           </Link>
+          <Link to="/contact">
           <button
             style={{ backgroundColor: "#b45309" }}
             className="w-full mt-2 text-white py-3 rounded-xl hover:bg-yellow-700 transition"
           >
             Contact
           </button>
+          </Link>
+
+          
+          
         </div>
       )}
     </header>

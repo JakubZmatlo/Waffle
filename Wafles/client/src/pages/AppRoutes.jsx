@@ -5,6 +5,8 @@ import Createwafle from "./CreateWafles";
 import WafleListCell from "./WafleList/WafleListCell";
 import CreatedWafles from "./CreatedWafles";
 import OrdersList from "./Orders";
+import Contact from "./Contact";
+import AboutUs from "./AboutUs";
 
 
 export default function AppRoutes() {
@@ -16,6 +18,9 @@ export default function AppRoutes() {
         <Route path="/wafles" element={<WafleListCell />} />
         <Route path="/created-wafle/:id" element={<CreatedWafles />} />
         <Route path="/orders" element={<OrdersList />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
+        
       </Routes>
     </BrowserRouter>
   );

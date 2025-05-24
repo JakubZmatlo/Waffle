@@ -13,7 +13,7 @@ export default function OrdersList() {
     return <p className="text-center mt-8">Zatím nejsou žádné objednávky.</p>;
 
   return (
-    <div className="max-w-xl mx-auto mt-12 p-6 bg-yellow-50 rounded-2xl shadow-md border border-yellow-300">
+    <div className="max-w-xl mx-auto mt-12 p-6 bg-yellow-50 rounded-2xl shadow-md border border-yellow-500">
       <h1 className="text-3xl font-bold text-yellow-700 mb-6 text-center">
         📜 Objednávky 📜
       </h1>
@@ -21,7 +21,7 @@ export default function OrdersList() {
         {orders.map((order) => (
           <li
             key={order._id}
-            className="relative border border-yellow-300 rounded p-4 bg-yellow-100 hover:bg-yellow-200 transition"
+            className="relative border border-yellow-500 rounded p-4 bg-yellow-100 hover:bg-yellow-200 transition"
           >
             <p className="text-yellow-900 font-semibold mb-1">
               <strong>Jméno:</strong> {order.name || "Neuvedeno"}
