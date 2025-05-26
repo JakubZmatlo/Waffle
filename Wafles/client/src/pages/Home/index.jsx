@@ -1,13 +1,28 @@
 import Footer from "@/components/Footer";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 
 export default function Home() {
+  const [mainImage, setMainImage] = useState("Wafle1.webp");
+  const [thumbnails, setThumbnails] = useState([
+    "Wafle4.png",
+    "Wafle3.png",
+    "Wafle2.png",
+  ]);
+
+  const handleImageSwap = (clickedImage, index) => {
+    const newThumbnails = [...thumbnails];
+    newThumbnails[index] = mainImage;
+    setMainImage(clickedImage);
+    setThumbnails(newThumbnails);
+  };
+
   return (
     <>
       <Header className="sticky top-0 bg-yellow-100 z-50 mt-4 mb-5" />
-      <div className=" md:hidden w-full flex justify-center mb-10 px-6">
+
+      <div className="md:hidden w-full flex justify-center mb-10 px-6">
         <img
           src="https://static.vecteezy.com/system/resources/previews/035/512/249/original/ai-generated-waffle-clipart-design-illustration-free-png.png"
           alt="Waffle"
@@ -47,28 +62,23 @@ export default function Home() {
             </Link>
           </div>
           <div className="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
-            <img
-              src="Wafle4.png"
-              alt="Speciální wafle"
-              className="w-48 h-auto"
-            />
-            <img
-              src="Wafle3.png"
-              alt="Speciální wafle"
-              className="w-48 h-auto"
-            />
-            <img
-              src="Wafle2.png"
-              alt="Speciální wafle"
-              className="w-48 h-auto"
-            />
+            {thumbnails.map((thumb, index) => (
+              <div key={thumb} className="w-48 h-48">
+                <img
+                  src={thumb}
+                  alt={`Wafle ${index + 2}`}
+                  className="w-full h-full object-contain cursor-pointer transition-transform hover:scale-105"
+                  onClick={() => handleImageSwap(thumb, index)}
+                />
+              </div>
+            ))}
           </div>
         </div>
 
         <img
-          src="Wafle1.webp"
-          alt="Waffle"
-          className="hidden md:block absolute right-0 top-0 w-80 lg:w-[500px] h-auto pointer-events-none"
+          src={mainImage}
+          alt="Velká waffle"
+          className="hidden md:block absolute right-0 top-0 w-80 lg:w-[500px] h-auto pointer-events-none transition-transform duration-300"
           style={{ top: "70px", transform: "translate(0%, -10%)" }}
         />
       </div>
