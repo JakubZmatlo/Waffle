@@ -51,16 +51,16 @@ export default function Header() {
           style={{ backgroundColor: "#b45309" }}
           className="hidden md:block text-white px-4 py-3 rounded-xl hover:bg-yellow-700 transition"
         >
-          Contact
+          Contact Us
         </button>
         </Link>
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-yellow-50 px-4 py-4 space-y-4 text-center shadow-md rounded-b-2xl">
+        <div className="md:hidden bg-yellow-50 px-4 py-4 space-y-4 text-center shadow-md rounded-b-2xl ">
           <Link
             to="/"
-            className="block text-yellow-700 font-medium hover:text-yellow-600"
+            className="block !text-yellow-700 !font-medium !hover:text-yellow-600"
             onClick={() => setMenuOpen(false)}
           >
             Domů

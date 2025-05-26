@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Createwafle() {
   const [formData, setFormData] = useState({});
@@ -59,35 +60,41 @@ export default function Createwafle() {
             />
 
             <div>
-              <h3 className="text-xl  font-bold text-yellow-600 mb-8">
+              <h3 className="text-xl font-bold text-yellow-600 mb-8">
                 1. Vyber marmeládu
               </h3>
-              <div className="grid grid-cols-4 gap-4 text-white">
-                {["jahodová", "višnová", "nutela", "rybízová"].map(
-                  (marmelada) => {
-                    const isSelected = formData.marmelada === marmelada;
-                    return (
-                      <button
-                        type="button"
-                        key={marmelada}
-                        className={`relative rounded-2xl border-2 p-4 text-lg font-medium transition-all ${
-                          isSelected
-                            ? "border-yellow-500 shadow-lg"
-                            : "border-gray-300 hover:border-yellow-400"
-                        }`}
-                        style={{
-                          backgroundColor: isSelected ? "#9C651B" : "#B7791F",
-                        }}
-                        onClick={() => handleInput("marmelada", marmelada)}
-                      >
-                        {marmelada}
-                        {isSelected && (
-                          <span className="absolute top-1 right-2 text-white text-xl "></span>
-                        )}
-                      </button>
-                    );
-                  }
-                )}
+              <div className="grid grid-cols-2 gap-4 text-white ">
+                {[
+                  "jahodová",
+                  "višnová",
+                  "nutela",
+                  "rybízová",
+                  "Bez marmelády",
+                ].map((marmelada, index) => {
+                  const isSelected = formData.marmelada === marmelada;
+                  const isLast = index === 4; 
+
+                  return (
+                    <button
+                      type="button"
+                      key={marmelada}
+                      className={` rounded-2xl border-2 text-lg font-medium transition-all w-full ${
+                        isSelected
+                          ? "border-yellow-500 shadow-lg"
+                          : "border-gray-300 hover:border-yellow-400"
+                      } ${isLast ? "col-span-2 justify-self-center" : ""}`}
+                      style={{
+                        backgroundColor: isSelected ? "#724509" : "#B7791F",
+                      }}
+                      onClick={() => handleInput("marmelada", marmelada)}
+                    >
+                      {marmelada}
+                      {isSelected && (
+                        <span className="absolute top-1 right-2 text-white text-xl "></span>
+                      )}
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
@@ -108,7 +115,7 @@ export default function Createwafle() {
                           : "border-gray-300 hover:border-yellow-400"
                       }`}
                       style={{
-                        backgroundColor: isSelected ? "#9C651B" : "#B7791F",
+                        backgroundColor: isSelected ? "#724509" : "#B7791F",
                       }}
                       onClick={() => handleInput("slehacka", val)}
                     >
@@ -140,7 +147,7 @@ export default function Createwafle() {
                             : "border-gray-300 hover:border-yellow-400"
                         }`}
                         style={{
-                          backgroundColor: isSelected ? "#9C651B" : "#B7791F",
+                          backgroundColor: isSelected ? "#724509" : "#B7791F",
                         }}
                         onClick={() => handleInput("ovoce", ovoce)}
                       >
@@ -172,7 +179,7 @@ export default function Createwafle() {
                           : "border-gray-300 hover:border-yellow-400"
                       }`}
                       style={{
-                        backgroundColor: isSelected ? "#9C651B" : "#B7791F",
+                        backgroundColor: isSelected ? "#724509" : "#B7791F",
                       }}
                       onClick={() => handleInput("susenka", susenka)}
                     >
@@ -193,6 +200,13 @@ export default function Createwafle() {
             >
               Odeslat objednávku
             </button>
+            <Link
+              to="/"
+              style={{ backgroundColor: "#b45309" }}
+              className="mt-6 bg-yellow-500 text-white font-semibold py-3 rounded-xl text-lg hover:bg-yellow-600 w-full p-20"
+            >
+              Domů
+            </Link>
           </form>
         </div>
       </div>

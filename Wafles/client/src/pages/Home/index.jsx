@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <>
       <Header className="sticky top-0 bg-yellow-100 z-50 mt-4 mb-5" />
-
       <div className=" md:hidden w-full flex justify-center mb-10 px-6">
         <img
           src="https://static.vecteezy.com/system/resources/previews/035/512/249/original/ai-generated-waffle-clipart-design-illustration-free-png.png"
@@ -49,17 +48,17 @@ export default function Home() {
           </div>
           <div className="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
             <img
-              src="https://static.vecteezy.com/system/resources/previews/025/067/649/non_2x/waffle-with-ai-generated-free-png.png"
+              src="Wafle4.png"
               alt="Speciální wafle"
               className="w-48 h-auto"
             />
             <img
-              src="https://static.vecteezy.com/system/resources/previews/035/512/241/original/ai-generated-waffle-clipart-design-illustration-free-png.png"
+              src="Wafle3.png"
               alt="Speciální wafle"
               className="w-48 h-auto"
             />
             <img
-              src="https://static.vecteezy.com/system/resources/previews/035/512/267/non_2x/ai-generated-waffle-clipart-design-illustration-free-png.png"
+              src="Wafle2.png"
               alt="Speciální wafle"
               className="w-48 h-auto"
             />
@@ -67,7 +66,7 @@ export default function Home() {
         </div>
 
         <img
-          src="https://static.vecteezy.com/system/resources/previews/035/512/249/original/ai-generated-waffle-clipart-design-illustration-free-png.png"
+          src="Wafle1.webp"
           alt="Waffle"
           className="hidden md:block absolute right-0 top-0 w-80 lg:w-[500px] h-auto pointer-events-none"
           style={{ top: "70px", transform: "translate(0%, -10%)" }}

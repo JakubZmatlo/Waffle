@@ -1,26 +1,21 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "@/components/Header";
 
 export default function AboutUs() {
   const navigate = useNavigate();
 
   return (
+    <>
+    <Header className="sticky top-0 bg-yellow-100 z-50 mt-4 mb-5" />
     <div className="max-w-4xl mx-auto p-6 mt-10 bg-yellow-50 rounded-lg shadow-md space-y-12 relative border border-yellow-500">
-      <button
-        onClick={() => navigate("/")}
-        style={{ backgroundColor: "#b45309" }}
-        className="absolute top-6 right-6 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-lg transition"
-      >
-        Domů
-      </button>
-
       <section>
         <h1 className="text-4xl font-bold text-yellow-700 mb-6">O nás</h1>
         <p className="text-yellow-800 text-lg mb-4">
-          Vítejte ve Waffle Delight – místě, kde se vaše sny o dokonalých waflích stávají skutečností! Jsme nadšení milovníci waflí, kteří věří, že každý kousek sladké pochoutky může přinést radost a úsměv.
+          Vítejte ve Sweet Waffles místě, kde se vaše sny o dokonalých waflích stávají skutečností! Jsme nadšení milovníci waflí, kteří věří, že každý kousek sladké pochoutky může přinést radost a úsměv.
         </p>
         <p className="text-yellow-800 text-lg mb-4">
-          Naše wafle jsou připravovány z těch nejkvalitnějších surovin a můžete si je sestavit přesně podle své chuti – vyberte si marmeládu, ovoce, sušenky nebo šlehačku. Naším cílem je nabídnout jedinečný zážitek, který potěší všechny vaše smysly.
+          Naše wafle jsou připravovány z těch nejkvalitnějších surovin a můžete si je sestavit přesně podle své chuti vyberte si marmeládu, ovoce, sušenky nebo šlehačku. Naším cílem je nabídnout jedinečný zážitek, který potěší všechny vaše smysly.
         </p>
         <p className="text-yellow-800 text-lg mb-4">
           Jsme tým nadšených cukrářů a designérů, kteří neustále pracují na nových kombinacích a nápadech. Přijďte a ochutnejte wafle plné lásky a vášně!
@@ -60,5 +55,6 @@ export default function AboutUs() {
         </div>
       </section>
     </div>
+    </>
   );
 }
