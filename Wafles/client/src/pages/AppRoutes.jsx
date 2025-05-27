@@ -7,6 +7,7 @@ import CreatedWafles from "./CreatedWafles";
 import OrdersList from "./Orders";
 import Contact from "./Contact";
 import AboutUs from "./AboutUs";
+import Menu from "./Menu";
 
 
 export default function AppRoutes() {
@@ -20,6 +21,7 @@ export default function AppRoutes() {
         <Route path="/orders" element={<OrdersList />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/Menu" element={<Menu />} />
         
       </Routes>
     </BrowserRouter>

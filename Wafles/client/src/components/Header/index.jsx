@@ -6,7 +6,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-yellow-100 sticky top-0 z-50 shadow-md rounded-4xl not-even:mb-8">
+    <header className="bg-yellow-100 sticky top-0 z-50 shadow-md rounded-b-3xl">
       <div className="flex items-center justify-between max-w-6xl mx-auto px-4 sm:px-8 py-4">
         <div className="text-yellow-700 font-bold text-3xl sm:text-4xl cursor-pointer select-none">
           🧇SweetWafles
@@ -33,12 +33,6 @@ export default function Header() {
             O nás
           </Link>
           <Link
-            to="/favorite-wafles"
-            className="text-yellow-800 font-medium hover:underline hover:text-yellow-600"
-          >
-            Oblíbené
-          </Link>
-          <Link
             to="/orders"
             className="text-yellow-800 font-medium hover:underline hover:text-yellow-600"
           >
@@ -47,20 +41,20 @@ export default function Header() {
         </nav>
 
         <Link to="/contact">
-        <button
-          style={{ backgroundColor: "#b45309" }}
-          className="hidden md:block text-white px-4 py-3 rounded-xl hover:bg-yellow-700 transition"
-        >
-          Contact Us
-        </button>
+          <button
+            style={{ backgroundColor: "#b45309" }}
+            className="hidden md:block text-white px-4 py-3 rounded-xl hover:bg-yellow-700 transition"
+          >
+            Contact Us
+          </button>
         </Link>
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-yellow-50 px-4 py-4 space-y-4 text-center shadow-md rounded-b-2xl ">
+        <div className="md:hidden bg-yellow-50 px-4 py-4 space-y-4 text-center shadow-md rounded-b-2xl">
           <Link
             to="/"
-            className="block !text-yellow-700 !font-medium !hover:text-yellow-600"
+            className="block text-yellow-700 font-medium hover:text-yellow-600"
             onClick={() => setMenuOpen(false)}
           >
             Domů
@@ -73,13 +67,6 @@ export default function Header() {
             Objednat wafli
           </Link>
           <Link
-            to="/favorite"
-            className="block text-yellow-700 font-medium hover:text-yellow-600"
-            onClick={() => setMenuOpen(false)}
-          >
-            Oblíbené
-          </Link>
-          <Link
             to="/orders"
             className="block text-yellow-700 font-medium hover:text-yellow-600"
             onClick={() => setMenuOpen(false)}
@@ -87,16 +74,13 @@ export default function Header() {
             Objednávky
           </Link>
           <Link to="/contact">
-          <button
-            style={{ backgroundColor: "#b45309" }}
-            className="w-full mt-2 text-white py-3 rounded-xl hover:bg-yellow-700 transition"
-          >
-            Contact
-          </button>
+            <button
+              style={{ backgroundColor: "#b45309" }}
+              className="w-full mt-2 text-white py-3 rounded-xl hover:bg-yellow-700 transition"
+            >
+              Contact
+            </button>
           </Link>
-
-          
-          
         </div>
       )}
     </header>

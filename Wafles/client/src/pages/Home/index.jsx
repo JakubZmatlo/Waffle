@@ -53,7 +53,7 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link to="/menu" className="w-full md:w-auto">
+            <Link to="/Menu" className="w-full md:w-auto">
               <div className="bg-yellow-100 hover:bg-yellow-200 py-3 md:py-4 px-6 md:px-8 rounded-full shadow-md transition transform hover:scale-105 cursor-pointer text-center">
                 <h2 className="text-lg md:text-xl font-semibold text-yellow-800">
                   📋 Zobrazit menu

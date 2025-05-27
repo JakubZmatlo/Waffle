@@ -2,8 +2,9 @@
 
 #root {
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .logo {
