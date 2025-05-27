@@ -73,6 +73,13 @@ export default function Header() {
           >
             Objednávky
           </Link>
+          <Link
+            to="/AboutUs"
+            className="block text-yellow-700 font-medium hover:text-yellow-600"
+            onClick={() => setMenuOpen(false)}
+          >
+            O nás
+          </Link>
           <Link to="/contact">
             <button
               style={{ backgroundColor: "#b45309" }}

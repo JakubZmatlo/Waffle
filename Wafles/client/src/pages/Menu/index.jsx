@@ -36,9 +36,9 @@ export default function Index() {
   return (
     <>
       <Header className="sticky top-0 bg-yellow-100 z-50 mt-4 mb-5" />
-      <div className="max-w-[900px] mx-auto px-4 py-8">
+      <div className="max-w-6xl mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-yellow-800 text-center mb-10">Nabídka waflí</h1>
-        <div className="grid gap-8 grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {firstRow.map((wafle, index) => (
             <div 
               key={index} 
@@ -48,7 +48,7 @@ export default function Index() {
                 <img
                   src={wafle.image}
                   alt={wafle.name}
-                  className="rounded-2xl h-70 w-auto object-cover mb-4"
+                  className="rounded-2xl h-60 w-auto object-cover mb-4"
                 />
               ) : (
                 <div className="h-32 w-full rounded-2xl bg-yellow-200 flex items-center justify-center mb-4 text-yellow-600">
@@ -60,7 +60,7 @@ export default function Index() {
             </div>
           ))}
         </div>
-        <div className="grid gap-8 grid-cols-2 mx-auto mt-8 max-w-[600px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-auto mt-8 max-w-3xl">
           {secondRow.map((wafle, index) => (
             <div 
               key={index + 3} 
@@ -70,7 +70,7 @@ export default function Index() {
                 <img
                   src={wafle.image}
                   alt={wafle.name}
-                  className="rounded-2xl h-70 w-auto object-cover mb-4"
+                  className="rounded-2xl h-60 w-auto object-cover mb-4"
                 />
               ) : (
                 <div className="h-32 w-full rounded-2xl bg-yellow-200 flex items-center justify-center mb-4 text-yellow-600">
