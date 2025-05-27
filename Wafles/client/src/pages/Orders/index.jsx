@@ -9,6 +9,12 @@ export default function OrdersList() {
     setOrders(savedOrders);
   }, []);
 
+  const handleDelete = (id) => {
+    const filteredOrders = orders.filter((order) => order._id !== id);
+    setOrders(filteredOrders);
+    localStorage.setItem("orders", JSON.stringify(filteredOrders));
+  };
+
   if (orders.length === 0)
     return <p className="text-center mt-8">Zatím nejsou žádné objednávky.</p>;
 
@@ -38,6 +44,13 @@ export default function OrdersList() {
               <p><strong>Ovoce:</strong> {order.ovoce || "Žádné"}</p>
               <p><strong>Sušenka:</strong> {order.susenka}</p>
             </div>
+            <button
+              onClick={() => handleDelete(order._id)}
+              className="absolute top-2 right-2 text-white py-1 px-3 rounded transition"
+              style={{ backgroundColor: "#B7791F" }}
+            >
+              Smazat
+            </button>
           </li>
         ))}
       </ul>
