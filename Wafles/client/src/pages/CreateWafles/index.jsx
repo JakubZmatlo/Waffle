@@ -65,8 +65,7 @@ export default function Createwafle() {
               </h3>
               <div className="grid grid-cols-2 gap-4 text-white ">
                 {[
-                  "jahodová",
-                  "višnová",
+                  "merunková",
                   "nutela",
                   "rybízová",
                   "Bez marmelády",
@@ -134,8 +133,8 @@ export default function Createwafle() {
                 <h3 className="text-xl  font-bold text-yellow-600 mb-8">
                   3. Vyber ovoce na šlehačku
                 </h3>
-                <div className="grid grid-cols-3 gap-4 text-white">
-                  {["jahody", "maliny", "borůvky"].map((ovoce) => {
+                <div className="grid grid-cols-2 gap-4 text-white">
+                  {["banán", "maliny",].map((ovoce) => {
                     const isSelected = formData.ovoce === ovoce;
                     return (
                       <button
