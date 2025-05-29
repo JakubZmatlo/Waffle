@@ -11,14 +11,12 @@ export default function Header() {
         <div className="text-yellow-700 font-bold text-3xl sm:text-4xl cursor-pointer select-none">
           🧇SweetWafles
         </div>
-
         <button
           className="md:hidden text-yellow-800"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
-
         <nav className="hidden md:flex space-x-6">
           <Link
             to="/"
@@ -39,7 +37,6 @@ export default function Header() {
             Objednávky
           </Link>
         </nav>
-
         <Link to="/contact">
           <button
             style={{ backgroundColor: "#b45309" }}
@@ -49,7 +46,6 @@ export default function Header() {
           </button>
         </Link>
       </div>
-
       {menuOpen && (
         <div className="md:hidden bg-yellow-50 px-4 py-4 space-y-4 text-center shadow-md rounded-b-2xl">
           <Link
